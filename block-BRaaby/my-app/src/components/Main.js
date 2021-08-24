@@ -14,7 +14,7 @@ class Main extends React.Component {
     componentDidMount = () => {
         fetch("https://randomuser.me/api/")
         .then((res) => res.json())
-        .then((data) => this.setState({data}));
+        .then((data) => this.setState({data, hovered: ""}));
     }
 
     display = () => {
@@ -87,29 +87,21 @@ class Main extends React.Component {
                              <div className="flex-20">
                                 <i className="text-2xl text-center fas fa-envelope-open" onMouseOver={
                                     () => this.setState({hovered: "mail"})
-                                } onMouseLeave={
-                                    () => this.setState({hovered: ""})
                                 }></i>
                              </div>
                              <div class="flex-20">
                                 <i className="text-2xl text-center fas fa-phone-alt" onMouseOver={
                                     () => this.setState({hovered: "phone"})
-                                } onMouseLeave={
-                                    () => this.setState({hovered: ""})
                                 }></i>
                              </div>
                             <div className="flex-20">
                                 <i className="text-2xl text-center fas fa-street-view" onMouseOver={
                                     () => this.setState({hovered: "street"})
-                                } onMouseLeave={
-                                    () => this.setState({hovered: ""})
                                 }></i>
                             </div>
                             <div className="flex-20">
                                 <i className="text-2xl text-center fas fa-city" onMouseOver={
                                     () => this.setState({hovered: "city"})
-                                } onMouseLeave={
-                                    () => this.setState({hovered: ""})
                                 }></i>
                             </div>
                            
